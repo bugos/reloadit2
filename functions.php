@@ -2,8 +2,8 @@
 function handle_post_data() {
 	if (isset($_POST['phone']) && isset($_POST['code'])) { 
 	//Form submitted. Set the cookies and reload.
-		setcookie('phone', $_POST['phone'], time()+ 0.5 * 3600);
-		setcookie('code',  $_POST['code'],  time()+ 0.5 * 3600);
+		setcookie('phone', $_POST['phone'], time()+ 60*60*24 * 30); //30 days
+		setcookie('code',  $_POST['code'],  time()+ 60*60* 0.5); //half an hour
 		header("Location: {$_SERVER['PHP_SELF']}");
 	}
 }
@@ -90,7 +90,10 @@ function print_debug_output($url, $json) {
 }
 /* */
 function print_prize_table(array $d) { 
-	?> <h2> Choose a <span style="color:<?=get_type($d)?>"><?=get_type($d)?></span> prize: </h2>
+	$type = get_type($d); 
+	?> <h3><span class="yellow-on-black"> Choose a 
+	<span style=" background-color:<?=$type?>;"><?=$type?></span>
+	prize:</span></h3>
 	<!-- Start data table --> 
 	<table> <?
 		foreach ( $d['extra']['chooseyourself'] as $prize)
@@ -101,7 +104,7 @@ function print_prize_table(array $d) {
 			$prizeid 	 = $prize['prizeid'];
 			?> 
 			<tr >
-				<td id="td_title" class="table_link" onclick="document.location = '<?=INDEX_FILE?>?prizeid=<?=$prizeid?>'" >
+				<td class="table_link" onclick="document.location = '<?=INDEX_FILE?>?prizeid=<?=$prizeid?>'" >
 					<h2><img width="30%" src="<?=$image?>"/><?=$title?></h2> </td>
 				<td> <?=$description?> 
 					<b>PrizeId: <input value="<?=$prizeid?>" size="5" disabled></b> </td>
@@ -114,10 +117,10 @@ function print_prize_table(array $d) {
 function print_custom_prizeid() {
 	?> <!-- Start custom_prizeid_form -->
 	<form method="GET" action="<?=INDEX_FILE?>">
-		Or enter a custom PrizeID:  
-		<?='.'.INDEX_FILE?>?prizeid=
-		<input type="text" name="prizeid"/>
-		<input type="submit"/>
+		<span class="yellow-on-black">Or enter a custom PrizeID:  
+		<?='.'.INDEX_FILE?>?prizeid=</span><!-- no space
+		--><input type="text" name="prizeid"/>
+		<input type="submit" value="Submit Query"/>
 	</form> <!-- End custom_prizeid_form --> <?
 }
 

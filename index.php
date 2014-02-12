@@ -27,7 +27,7 @@ handle_post_data(); // Handle submitted POST data if there is any.
 		if ($phone != '' && $code != '' && $prizeid == '') { 
 		//Prize selection screen
 			$url = API . "?method=runLottery&msisdn=$phone&code=$code";
-			/*===DEBUG===*/	if ($code == 'test') $url = 'FILES/fake.php';
+			/*===DEBUG===*/	if ($code == 'test1') $url = 'FILES/fake.php';
 			$data = get_data($url);
 
 			//Parse response 
@@ -78,17 +78,17 @@ handle_post_data(); // Handle submitted POST data if there is any.
 			    	))) { 
 					//Success
 					show_message('Contest Submission:', 'Contest Submission Successful', '');
-				} 
+				}
 			} 
 		}
 		else {
 		//First visit. Homepage.
-			show_message('What\'s Up Reload It Private Api Showcase.', 'whatsup.gr/reloadit/', 'Enable debug and use code test for testing.');
+			show_message('What\'s Up Reload It Private Api Showcase.', 'whatsup.gr/reloadit/', 'Use code test for testing.');
 		}
 		?>
 	</div> <!-- End content_wrapper -->
 	<!-- Start footer_wrapper -->
-	<div id="footer_wrapper" class="debug_wrapper" style="<?=$debug?'':'display:none;'/*Hide when debug is off*/?>">  
+	<div id="footer_wrapper">  
 		Made in Thessaloniki. <small>Originaly developed in Agia Galini.</small>
 	</div> <!-- End footer_wrapper -->
 </body>

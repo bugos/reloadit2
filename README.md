@@ -1,4 +1,5 @@
-reloadit2
-=========
+What's Up ReloadIt Private API Showcase
+========
 
-whatsup.gr/reloadit private api showcase
+custom php client for http://www.whatsup.gr/reloadit/ - uses unofficial api
+
