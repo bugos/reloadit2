@@ -32,12 +32,12 @@ handle_post_data(); // Handle submitted POST data if there is any.
 
 			//Parse response 
 			if (parse_response(array(
-		    	"result"      => $data['result'] , 
-		    	"success_val" => 'v' , 
-		    	"err_title"   => 'Server Error' , 
-				"err_sub"     => 'Code ' . isset_shield($data['error_code']) , 
-		    	"err_desc"    => isset_shield($data['error_string']) , 
-		    	"err_small"   => "(Result {$data['result']} != v)" 
+			"result"      => $data['result'] , 
+			"success_val" => 'v' , 
+			"err_title"   => 'Server Error' , 
+			"err_sub"     => 'Code ' . isset_shield($data['error_code']) , 
+			"err_desc"    => isset_shield($data['error_string']) , 
+			"err_small"   => "(Result {$data['result']} != v)" 
 		    	))) { 
 			//Success
 				print_prize_table($data);
@@ -55,11 +55,11 @@ handle_post_data(); // Handle submitted POST data if there is any.
 
 			//Parse response 
 			if (parse_response(array(
-		    	"result"      => $rld_data['response'] , 
+			"result"      => $rld_data['response'] , 
 		    	"success_val" => 1 , 
-		    	"err_title"   => 'Prize Code Submisson:' ,
-				"err_sub"     => 'Failure: An error occured.' , 
-		    	"err_desc"    => '<a href="' . INDEX_FILE . '">Go back</a>' , 
+			"err_title"   => 'Prize Code Submisson:' ,
+			"err_sub"     => 'Failure: An error occured.' , 
+			"err_desc"    => '<a href="' . INDEX_FILE . '">Go back</a>' , 
 		    	))) { 
 				//Success
 				show_message('Prize Code Submisson:', 'Prize Selection Successful', '');
@@ -71,10 +71,10 @@ handle_post_data(); // Handle submitted POST data if there is any.
 				
 				//Parse response
 				if (parse_response(array(
-			    	"result"      => $opt_data['response'] , 
-			    	"success_val" => 1 , 
-			    	"err_title"   => 'Contest Submisson:' ,
-					"err_sub"     => 'Failure' , 
+				"result"      => $opt_data['response'] , 
+				"success_val" => 1 , 
+				"err_title"   => 'Contest Submisson:' ,
+				"err_sub"     => 'Failure' , 
 			    	))) { 
 					//Success
 					show_message('Contest Submission:', 'Contest Submission Successful', '');
