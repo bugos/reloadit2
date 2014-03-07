@@ -11,15 +11,16 @@
 				title="Δεκαψήφιος αριθμός κινητού που ξεκινάει με 69." />
 			
 			<span class="yellow-on-black">Κωδικος:</span>
-			<input type="text" name="code"  value="<?=$code?>"  <?=($phone != '')?'autofocus':''?>
+			<input type="text" name="code"  value="<?=$code?>"  <?=($phone == '')?'':'autofocus'?>
 				pattern="(\w{5})"  required  
 				title="Ο κωδικός ReloadIt αποτελείται από 5 αλφαρηθμητικούς χαρακτήρες." />
 				
 			<input type="submit" value="Go!" />
 			<input type="button" value="Reset" onclick="reset_code(this)" />
 			
-			<input id="debug_checkbox" type="checkbox" onchange="toggle_debug(this)" <?=$debug?'checked':''?> /><!-- no whitespace in between
-			--><label for="debug_checkbox">Debug<sup>LIVE</sup></label>
+			<label for="debug_checkbox">
+				<input id="debug_checkbox" type="checkbox" onchange="toggle_debug()" <?=$debug?'checked':''?> />
+			Debug<sup>LIVE</sup></label>
 		</form>
 	</div> <!-- End Control Panel -->
 </div> <!--End header_wrapper -->

@@ -1,6 +1,6 @@
 <!--
 	Cosmote WhatsUp Reloadit Private Api Showcase Script
-    Developer: Evangelos "bugos" Mamalakis <mamalakis@auth.gr>
+	Developer: Evangelos "bugos" Mamalakis <mamalakis@auth.gr>
 
 	Short Tags: This script uses php short tags. Set short_open_tag=enabled in php.ini
 -->
@@ -27,18 +27,18 @@ handle_post_data(); // Handle submitted POST data if there is any.
 		if ($phone != '' && $code != '' && $prizeid == '') { 
 		//Prize selection screen
 			$url = API . "?method=runLottery&msisdn=$phone&code=$code";
-			/*===DEBUG===*/	if ($code == 'test1') $url = 'FILES/fake.php';
+			/*===DEBUG===*/ if ($code == 'test1') $url = 'FILES/fake.php';
 			$data = get_data($url);
 
 			//Parse response 
 			if (parse_response(array(
-		    	"result"      => $data['result'] , 
-		    	"success_val" => 'v' , 
-		    	"err_title"   => 'Server Error' , 
+				"result"      => $data['result'] , 
+				"success_val" => 'v' , 
+				"err_title"   => 'Server Error' , 
 				"err_sub"     => 'Code ' . isset_shield($data['error_code']) , 
-		    	"err_desc"    => isset_shield($data['error_string']) , 
-		    	"err_small"   => "(Result {$data['result']} != v)" 
-		    	))) { 
+				"err_desc"    => isset_shield($data['error_string']) , 
+				"err_small"   => "(Result {$data['result']} != v)" 
+				))) { 
 			//Success
 				print_prize_table($data);
 				print_custom_prizeid();
@@ -55,12 +55,12 @@ handle_post_data(); // Handle submitted POST data if there is any.
 
 			//Parse response 
 			if (parse_response(array(
-		    	"result"      => $rld_data['response'] , 
-		    	"success_val" => 1 , 
-		    	"err_title"   => 'Prize Code Submisson:' ,
+				"result"      => $rld_data['response'] , 
+				"success_val" => 1 , 
+				"err_title"   => 'Prize Code Submisson:' ,
 				"err_sub"     => 'Failure: An error occured.' , 
-		    	"err_desc"    => '<a href="' . INDEX_FILE . '">Go back</a>' , 
-		    	))) { 
+				"err_desc"    => '<a href="' . INDEX_FILE . '">Go back</a>' , 
+				))) { 
 				//Success
 				show_message('Prize Code Submisson:', 'Prize Selection Successful', '');
 			
@@ -71,11 +71,11 @@ handle_post_data(); // Handle submitted POST data if there is any.
 				
 				//Parse response
 				if (parse_response(array(
-			    	"result"      => $opt_data['response'] , 
-			    	"success_val" => 1 , 
-			    	"err_title"   => 'Contest Submisson:' ,
+					"result"      => $opt_data['response'] , 
+					"success_val" => 1 , 
+					"err_title"   => 'Contest Submisson:' ,
 					"err_sub"     => 'Failure' , 
-			    	))) { 
+					))) { 
 					//Success
 					show_message('Contest Submission:', 'Contest Submission Successful', '');
 				}

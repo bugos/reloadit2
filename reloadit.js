@@ -12,21 +12,22 @@ function reset_code(self) {
 	self.parentNode.submit();
 }
 
-/* Show/Hide ALL elements with ClassName = debug_wrapper,
-Enable/Disable form validation,
+/* Handles the changes of the debug_checkbox.
+show/hide ALL elements with ClassName = debug_wrapper,
+enable/disable form validation,
 and set the cookies accordingly.*/
-function toggle_debug(checkbox) {
-	var forEach = Array.prototype.forEach; //Prepare to use forEach method with a NodeList
+function toggle_debug() {
+	var forEach = Array.prototype.forEach; //we will use the forEach method of arrays on a NodeList
+	var checkbox = document.getElementById("debug_checkbox");
 	var nodelist = document.getElementsByClassName("debug_wrapper");
 	var form = document.getElementById("control_form") //or: checkbox.parentNode
-
 	if (checkbox.checked) {
 	//Debug mode ON
-		forEach.call(nodelist, function(node) { //hide debug_wrapper(s)
+		forEach.call(nodelist, function(node) {
 			node.style.display = 'block'; 
 		});
-		form.setAttribute("novalidate", true); //disable form validation
-		document.cookie = 'debug=1'; //set cookies
+		form.setAttribute("novalidate", true);
+		document.cookie = 'debug=1';
 	}
 	else {
 	//Debug mode OFF
@@ -34,8 +35,6 @@ function toggle_debug(checkbox) {
 			node.style.display = 'none'; 
 		});
 		form.removeAttribute("novalidate");
-
 		document.cookie = 'debug=0';
-		
 	}
 }
