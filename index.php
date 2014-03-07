@@ -35,7 +35,7 @@ handle_post_data(); // Handle submitted POST data if there is any.
 				"result"      => $data['result'] , 
 				"success_val" => 'v' , 
 				"err_title"   => 'Server Error' , 
-				"err_sub"     => 'Code ' . isset_shield($data['error_code']) , 
+				"err_sub"     => 'Code ' . isset_shield($data['error_code'], 'unknown') , 
 				"err_desc"    => isset_shield($data['error_string']) , 
 				"err_small"   => "(Result {$data['result']} != v)" 
 				))) { 
