@@ -13,12 +13,12 @@
                 title="Ο κωδικός ReloadIt αποτελείται από 5 αλφαρηθμητικούς χαρακτήρες." />
                 
             <input type="submit" value="Go!" />
-
-            <input id="reset" type="button" value="Reset" />
-            
-            <label for="debug_checkbox">
-                <input id="debug_checkbox" type="checkbox"/>
-            Debug<sup>LIVE</sup></label>
         </form>
+        
+        <input id="reset" type="button" value="Reset" />
+        
+        <label for="debug_checkbox">
+            <input id="debug_checkbox" type="checkbox"/>
+        Debug<sup>LIVE</sup></label>
     </nav>
 </header>

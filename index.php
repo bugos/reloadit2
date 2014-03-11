@@ -11,6 +11,7 @@ handle_post_data(); // Handle submitted POST data if there is any.
 ?>
 
 <!DOCTYPE html> <!-- Render in standards mode -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title> ReloadIt Private API Showcase </title>
@@ -90,3 +91,4 @@ handle_post_data(); // Handle submitted POST data if there is any.
         Made in Thessaloniki. <small>Originaly developed in Agia Galini.</small>
     </footer>
 </body>
+</html>

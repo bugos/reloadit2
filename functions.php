@@ -70,7 +70,10 @@ Smart trick ;)
 function perform_trick() {
     $trick_url = TRICK_FILE;
     $trick_data = get_data($trick_url, false);
+    echo '<article>';
     print_prize_table($trick_data);
+    echo '</article>';
+
 }
 
 /*=== Functions that print HTML code. ===*/
@@ -90,11 +93,14 @@ function print_debug_output($url, $json) {
 }
 /* */
 function print_prize_table(array $d) { 
+
     $type = get_type($d); 
-    ?> <h3><span class="yellow-on-black"> Choose a 
-    <span style=" background-color:<?=$type?>;"><?=$type?></span>
-    prize:</span></h3>
-    <!-- Start data table --> 
+    ?>
+    <section> 
+    <h3><span class="yellow-on-black"> Choose a 
+    <span style="background-color:<?=$type?>;"><?=$type?></span>
+    prize:
+    </span></h3>
     <table> <?
         foreach ( $d['extra']['chooseyourself'] as $prize)
         {
@@ -103,25 +109,28 @@ function print_prize_table(array $d) {
             $description = $prize['description'];
             $prizeid     = $prize['prizeid'];
             ?> 
-            <tr >
+            <tr>
                 <td class="table_link" onclick="document.location = '<?=INDEX_FILE?>?prizeid=<?=$prizeid?>'" >
                     <h2><img width="30%" src="<?=$image?>"/><?=$title?></h2> </td>
                 <td> <?=$description?> 
                     <b>PrizeId: <input value="<?=$prizeid?>" size="5" disabled></b> </td>
             </tr> 
             <?
-        }
-    ?> </table> <!-- End data table --> <?
+        }?>
+    </table>  
+    </section> 
+    <?
 }
 /* */
 function print_custom_prizeid() {
-    ?> <!-- Start custom_prizeid_form -->
+    ?><section>
     <form method="GET" action="<?=INDEX_FILE?>">
         <span class="yellow-on-black">Or enter a custom PrizeID:  
         <?='.'.INDEX_FILE?>?prizeid=</span><!-- no space
         --><input type="text" name="prizeid"/>
         <input type="submit" value="Submit Query"/>
-    </form> <!-- End custom_prizeid_form --> <?
+    </form>
+    </section><?
 }
 
 ?>
