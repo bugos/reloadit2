@@ -21,8 +21,7 @@ handle_post_data(); // Handle submitted POST data if there is any.
 
 <body>
 	<? require 'header.php'; ?> 
-	<!--Start content_wrapper --> 
-	<div id="content_wrapper"> 
+	<main>
 		<?
 		if ($phone != '' && $code != '' && $prizeid == '') { 
 		//Prize selection screen
@@ -86,9 +85,8 @@ handle_post_data(); // Handle submitted POST data if there is any.
 			show_message('What\'s Up Reload It Private Api Showcase.', 'whatsup.gr/reloadit/', 'Use code test for testing.');
 		}
 		?>
-	</div> <!-- End content_wrapper -->
-	<!-- Start footer_wrapper -->
-	<div id="footer_wrapper">  
+	</main>
+	<footer> 
 		Made in Thessaloniki. <small>Originaly developed in Agia Galini.</small>
-	</div> <!-- End footer_wrapper -->
+	</footer>
 </body>

@@ -77,16 +77,16 @@ function perform_trick() {
 
 /* */
 function print_debug_output($url, $json) { 
-	global $debug;
-	?> <!--Start debug_wrapper --> 
-	<div class="debug_wrapper" style="<?=$debug?'':'display:none;'/*Hide when debug is off*/?>"> 
+	?>
+	<section class="debug_wrapper"> 
 		<ul> 
 			<li> <b>Url:</b> <span><?=$url?></span> </li>
 			<li> <b>Json:</b> <br> 
 				<textarea disabled> <?=$json?> 
 			</textarea> </li>
 		</ul> 
-	</div> <!--End debug_wrapper --> <?
+	</section> 
+	<?
 }
 /* */
 function print_prize_table(array $d) { 

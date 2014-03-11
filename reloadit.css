@@ -2,8 +2,8 @@
 
 /* Generic */
 body {
-	background: #191919 url("FILES/bg.jpg")  no-repeat fixed center; 
-	/*background: #34495E; */
+	background: #191919 url("FILES/bg.jpg") no-repeat fixed top; 
+	/*background: #34495E;*/
 	color:#eee000;
 	font-family:sans-serif;
 }
@@ -35,12 +35,13 @@ input[type="submit"] {
 
 
 /* Header Wrapper */
-#header_wrapper {		
+header {		
 	width:100%; 
-	position:fixed;
+	overflow:auto;
+/*	position:fixed;
 	top:0; 
 	left:0;
-	height:90px;
+	height:90px;*/
 /*	background:-webkit-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
 	background:   -moz-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
 	background:		   linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%); */
@@ -48,13 +49,13 @@ input[type="submit"] {
 	/*background: #2c3e50;*/
 
 }
-#logo {
-	float:left;
-}
-#control_panel {
+nav {
 	text-align: right;
 	margin: 10px 15px; 
 	font-family: verdana;
+}
+#logo {
+	float:left;
 }
 label[for="debug_checkbox"]{
 	color:#00AA66; /*Debug Green*/
@@ -81,12 +82,12 @@ label[for="debug_checkbox"] sup {
 }
 
 /* Content Wrapper */
-#content_wrapper {
-	/*color:#0020B1; */ /*darkblue*/
-	/*color: #0066CC; */
+main {
 	max-width:75em;
 	margin: auto;
-	margin-top: 140px; /* header sapce */
+	/*color:#0020B1; */ /*darkblue*/
+	/*color: #0066CC; */
+	/*margin-top: 140px;*/ /* header sapce */
 }
 table {
 	color:black; 
@@ -94,7 +95,7 @@ table {
 	border: 3px dashed black; 
 	/*border-radius: 10px;*/
 }
-#content_wrapper table input {
+table input {
 	border:1px solid;
 	color: inherit;
 }
@@ -110,9 +111,6 @@ table {
 	background-color: yellow; 
 	cursor:pointer;
 }
-table h2 {
-	/*vertical-align:middle; does not work*/
-}
 table h2 img {
 	float:left;
 }
@@ -121,13 +119,11 @@ table h2 img {
 	font-weight: normal;
 }
 
-/*Footer Wrapper*/
-#footer_wrapper {
-	font-size: 0.6em;
-	position:fixed;
-	bottom:0;
-	right:0;
-	background-color:transparent; 
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
 	padding: 0.5em 0.8em;
 }
 
