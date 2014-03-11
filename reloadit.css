@@ -2,128 +2,128 @@
 
 /* Generic */
 body {
-	background: #191919 url("FILES/bg.jpg") no-repeat fixed top; 
-	/*background: #34495E;*/
-	color:#eee000;
-	font-family:sans-serif;
+    background: #191919 url("FILES/bg.jpg") no-repeat fixed top; 
+    /*background: #34495E;*/
+    color:#eee000;
+    font-family:sans-serif;
 }
 
 /* Flat Buttons */
 .yellow-on-black {
-	color: black;
-	font-family: verdana;
-	text-transform: uppercase;
-	background-color: #eee000;
-	font-weight: bold;
-	padding: 0.05em 0.2em;
+    color: black;
+    font-family: verdana;
+    text-transform: uppercase;
+    background-color: #eee000;
+    font-weight: bold;
+    padding: 0.05em 0.2em;
 }
 input {
-	color: black;
-	font-weight: bold;
-	/*text-transform: uppercase;*/
-	background-color:#eee000;
-	padding: 2px 6px;
-	border:0;
+    color: black;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+    background-color:#eee000;
+    padding: 2px 6px;
+    border:0;
 
 }
 input[type="button"],
 input[type="submit"] {
-	/*text-transform: normal;*/
-	padding: 3.5px 6px;
-	font-size: 1.1em;
+    /*text-transform: normal;*/
+    padding: 3.5px 6px;
+    font-size: 1.1em;
 }
 
 
 /* Header Wrapper */
-header {		
-	width:100%; 
-	overflow:auto;
-/*	position:fixed;
-	top:0; 
-	left:0;
-	height:90px;*/
-/*	background:-webkit-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
-	background:   -moz-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
-	background:		   linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%); */
-	/*background: #7F8C8D;*/
-	/*background: #2c3e50;*/
+header {        
+    width:100%; 
+    overflow:auto;
+/*  position:fixed;
+    top:0; 
+    left:0;
+    height:90px;*/
+/*  background:-webkit-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
+    background:   -moz-linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%);
+    background:        linear-gradient(top, rgba(0,0,0,0.90) 10%,rgba(0,0,0,0) 100%); */
+    /*background: #7F8C8D;*/
+    /*background: #2c3e50;*/
 
 }
 nav {
-	text-align: right;
-	margin: 10px 15px; 
-	font-family: verdana;
+    text-align: right;
+    margin: 10px 15px; 
+    font-family: verdana;
 }
 #logo {
-	float:left;
+    float:left;
 }
 label[for="debug_checkbox"]{
-	color:#00AA66; /*Debug Green*/
+    color:#00AA66; /*Debug Green*/
 }
 label[for="debug_checkbox"] sup {
-	font-size:0.45em;
+    font-size:0.45em;
 }
 
 /* Debug Wrapper */
 .debug_wrapper { 
-	/*display:[inline style controlled by PHP]*/
+    /*display:[inline style controlled by PHP]*/
 } 
 .debug_wrapper ul {
-	list-style:none;
-	padding:0px;
+    list-style:none;
+    padding:0px;
 }
 .debug_wrapper b, .debug_wrapper span, .debug_wrapper textarea{
-	background-color:#00AA66; /*seagreen*/
-	color:black;
+    background-color:#00AA66; /*seagreen*/
+    color:black;
 }
 .debug_wrapper textarea {
-	width:70%;
-	height:15em;
+    width:70%;
+    height:15em;
 }
 
 /* Content Wrapper */
 main {
-	max-width:75em;
-	margin: auto;
-	/*color:#0020B1; */ /*darkblue*/
-	/*color: #0066CC; */
-	/*margin-top: 140px;*/ /* header sapce */
+    max-width:75em;
+    margin: auto;
+    /*color:#0020B1; */ /*darkblue*/
+    /*color: #0066CC; */
+    /*margin-top: 140px;*/ /* header sapce */
 }
 table {
-	color:black; 
-	background-color: #eee000; 
-	border: 3px dashed black; 
-	/*border-radius: 10px;*/
+    color:black; 
+    background-color: #eee000; 
+    border: 3px dashed black; 
+    /*border-radius: 10px;*/
 }
 table input {
-	border:1px solid;
-	color: inherit;
+    border:1px solid;
+    color: inherit;
 }
 .table_link {
-	width: 22em;
-	text-transform: uppercase;
-	-webkit-transition: background-color 0.3s;
-	   -moz-transition: background-color 0.3s;
-	        transition: background-color 0.3s;
+    width: 22em;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0.3s;
+       -moz-transition: background-color 0.3s;
+            transition: background-color 0.3s;
 
 }
 .table_link:hover {
-	background-color: yellow; 
-	cursor:pointer;
+    background-color: yellow; 
+    cursor:pointer;
 }
 table h2 img {
-	float:left;
+    float:left;
 }
 .small_text {
-	font-size: 0.5em;
-	font-weight: normal;
+    font-size: 0.5em;
+    font-weight: normal;
 }
 
 
 footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 0.5em 0.8em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0.5em 0.8em;
 }
 
