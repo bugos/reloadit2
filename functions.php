@@ -2,8 +2,8 @@
 function handle_post_data() {
     if (isset($_POST['phone']) && isset($_POST['code'])) { 
     //Form submitted. Set the cookies and reload.
-        setcookie('phone', $_POST['phone'], time()+ 60*60*24 * 30); //30 days
-        setcookie('code',  $_POST['code'],  time()+ 60*60* 0.5); //half an hour
+        setcookie('phone', $_POST['phone']); 
+        setcookie('code',  $_POST['code'],  time()+ 60*60*0.5); //half an hour
         header("Location: {$_SERVER['PHP_SELF']}");
     }
 }

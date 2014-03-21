@@ -13,11 +13,11 @@ handle_post_data(); // Handle submitted POST data if there is any.
 <!DOCTYPE html> <!-- Render in standards mode -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title> ReloadIt Private API Showcase </title>
     <link rel="icon" type="image/x-icon" href="FILES/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="reloadit.css" />
-    <script type="text/javascript" src="reloadit.js"></script>
+    <script src="reloadit.js"></script>
 </head>
 
 <body>
@@ -83,7 +83,7 @@ handle_post_data(); // Handle submitted POST data if there is any.
         }
         else {
         //First visit. Homepage.
-            show_message('What\'s Up Reload It Private Api Showcase.', 'whatsup.gr/reloadit/', 'Use code test for testing.');
+            show_message('What\'s Up Reload It Private Api Showcase.', 'whatsup.gr/reloadit/', 'Use code test1 for testing.');
         }
         ?>
     </main>
