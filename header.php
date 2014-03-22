@@ -12,10 +12,10 @@
                 pattern="(\w{5})"  required  
                 title="Ο κωδικός ReloadIt αποτελείται από 5 αλφαρηθμητικούς χαρακτήρες." />
                 
-            <input type="submit" value="Go!" />
+            <button type="submit">Go!</button>
         </form>
         
-        <input id="reset" type="button" value="Reset" />
+        <button id="reset">Reset</button>
         
         <label for="debug_checkbox">
             <input id="debug_checkbox" type="checkbox"/>
